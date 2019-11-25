@@ -18,6 +18,7 @@ int main()
 {
 	SequenceSet Test;
 	char UserInput = ' ';
+	string zipCodeSelection = ' ';
 	while (UserInput != 'q')
 	{
 		DisplayMenu();
@@ -26,6 +27,14 @@ int main()
 		if (UserInput == 'a')
 		{
 			Test.PopulateSequenceSet("TestInput.txt");
+
+		}
+
+		else if (UserInput == 'b')
+		{
+			cout << "Please enter a zipcode you would like to search for:" << endl;
+			cin >> zipCodeSelection;
+			Test.SearchSequenceSet(zipcodeSelection);
 
 		}
 
